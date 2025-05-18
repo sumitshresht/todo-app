@@ -1,0 +1,105 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #121212;
+}
+
+.app-bg {
+  background: linear-gradient(135deg, #1e1e1e, #121212);
+}
+
+/* Sidebar */
+.sidebar {
+  background: rgba(30, 30, 30, 0.7);
+  backdrop-filter: blur(8px);
+  min-height: 100vh;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sidebar .nav-link {
+  padding: 10px;
+  border-radius: 8px;
+  transition: background 0.2s ease;
+}
+
+.sidebar .nav-link:hover,
+.sidebar .nav-link.active {
+  background-color: #2a2a2a;
+}
+
+/* Input & Button */
+.task-input {
+  background-color: #1c1c1c;
+  border: 1px solid #333;
+  border-radius: 30px;
+  color: #eee;
+  font-size: 1rem;
+  transition: border 0.2s;
+}
+
+.task-input:focus {
+  outline: none;
+  border-color: dodgerblue;
+  box-shadow: 0 0 5px dodgerblue;
+  background-color: #222;
+}
+
+.add-btn {
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.5rem 1.5rem;
+  background-color: #0d6efd;
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(13, 110, 253, 0.4);
+  transition: all 0.2s ease-in-out;
+  border: none;
+}
+
+.add-btn:hover {
+  background-color: #0b5ed7;
+  transform: translateY(-2px);
+}
+
+/* Task Cards */
+.task-card {
+  background-color: #2a2a2a;
+  border-radius: 16px;
+  padding: 16px 20px;
+  margin: 12px 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.task-card:hover {
+  background-color: #3a3a3a;
+  transform: scale(1.01);
+}
+
+.task-card span {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.task-card.active {
+  border-left: 4px solid dodgerblue;
+}
+
+.task-card.completed {
+  border-left: 4px solid limegreen;
+  opacity: 0.85;
+}
+
+/* Responsive Fixes */
+@media (max-width: 768px) {
+  .sidebar {
+    flex-direction: row;
+    overflow-x: auto;
+  }
+
+  .add-btn {
+    width: 100%;
+    justify-content: center;
+  }
+  
+}
