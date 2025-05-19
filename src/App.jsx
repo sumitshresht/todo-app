@@ -71,7 +71,7 @@ function App() {
               <i className="bi bi-gear me-2"></i> Settings
             </a>
           </nav>
-          <div className="mt-auto small text-muted">© 2025 Taskify</div>
+          <div className="mt-auto medium font-monospace">© 2025 Taskify</div>
         </div>
 
         {/* Main Content */}
